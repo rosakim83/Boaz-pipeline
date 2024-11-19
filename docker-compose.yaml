@@ -10,6 +10,9 @@ services:
       - |
         FLINK_PROPERTIES=
         jobmanager.rpc.address: jobmanager     
+      - AWS_ACCESS_KEY=${AWS_ACCESS_KEY}
+      - AWS_SECRET_KEY=${AWS_SECRET_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
     volumes: 
       - ./Flink_server:/usr/script/flink
     privileged: true

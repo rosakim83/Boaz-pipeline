@@ -5,10 +5,12 @@ import io
 from PIL import Image, ImageDraw
 import re
 import time
+import os
 
-aws_access_key="" 
-aws_secret_key=""
-
+aws_access_key=os.getenv("AWS_ACCESS_KEY")
+aws_secret_key=os.getenv("AWS_SECRET_KEY")
+if not aws_access_key or not aws_secret_key:
+    raise ValueError("AWS_ACCESS_KEY or AWS_SECRET_KEY is not set")
 
 class Choosecheese:
     def __init__(self):
