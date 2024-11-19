@@ -15,7 +15,7 @@ def simulation(data):
         "Authorization": f"Bearer {api_key}"
     }
     payload = {
-        "model": "gpt-4-turbo",
+        "model": "gpt-3.5-turbo",
         "messages": [
             {
             "role": "user",
